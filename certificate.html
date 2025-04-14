@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Certificate of Completion | Ilumiled</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <main class="certificate-container">
+    <div class="certificate">
+      <h1>🎉 Tabbacin Gama Kwas</h1>
+      <p>Wannan yana tabbatar da cewa</p>
+      <h2 id="student-name">[Sunanka]</h2>
+      <p>ta kammala kwas ɗin: <strong>“Amfani da Wayar Hannu”</strong></p>
+      <p>Ranar kammalawa: <span id="completion-date"></span></p>
+      <p class="thank-you">Muna alfahari da ke! 💪🏽</p>
+    </div>
+
+    <div class="actions">
+      <a href="dash.html" class="btn">🔙 Komawa Dashboard</a>
+      <button onclick="window.print()" class="btn">🖨 Buga Certificate</button>
+    </div>
+  </main>
+
+  <script>
+    const userName = localStorage.getItem('username') || "Fatima";
+    const date = new Date().toLocaleDateString('ha-NG', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+
+    document.getElementById('student-name').textContent = userName;
+    document.getElementById('completion-date').textContent = date;
+  </script>
+</body>
+</html>

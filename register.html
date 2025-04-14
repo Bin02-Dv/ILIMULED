@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register | Ilumiled</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Register (Rajista)</h2>
+    <form action="#">
+      <label>Full Name <small>(Cikakken suna)</small></label>
+      <input type="text" required>
+
+      <label>Username <small>(Sunan mai amfani)</small></label>
+      <input type="text" required>
+
+      <label>Email <small>(Imel)</small></label>
+      <input type="email" required>
+
+      <label>Password <small>(Kalmar sirri)</small></label>
+      <input type="password" required>
+
+      <label>Confirm Password <small>(Tabbatar da kalmar sirri)</small></label>
+      <input type="password" required>
+
+      <label>Gender <small>(Jinsi)</small></label>
+      <select>
+        <option value="">-- Select --</option>
+        <option>Female (Mace)</option>
+        <option>Male (Namiji)</option>
+      </select>
+
+      <label>Age <small>(Shekaru)</small></label>
+      <input type="number" min="10" max="100">
+
+      <button type="submit" class="btn">Register</button>
+      <p class="switch-link">Already have an account? <a href="login.html">Login</a></p>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Course: Amfani da wayar hannu | Ilumiled</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">🧠 Ilumiled</div>
+    <nav>
+      <a href="dash.html" style="color: rgb(57, 170, 245);">⬅ Back to Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="course">
+    <h2>📱 Kwas: Amfani da Wayar Hannu</h2>
+    
+    <div class="video-box">
+      <iframe width="100%" height="250" src="https://www.youtube.com/embed/VIDEO_ID" 
+              title="Intro video" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div class="lesson">
+        <h3>Darasi 1: Yadda ake kiran waya</h3>
+        <p>
+          Don kiran wani mutum, ka danna lambarsa ko ka rubuta lambarsa a app din kira. 
+          Idan ka gama, ka danna alamar jan waya don katse kiran.
+        </p>
+        <audio controls>
+          <source src="audio/lesson1_call.mp3" type="audio/mp3">
+          Your browser does not support the audio element.
+        </audio>
+      
+        <h3>Darasi 2: Aika Saƙonni</h3>
+        <p>
+          Za ka iya tura saƙo ta amfani da app kamar "Messages" ko "WhatsApp". Rubuta saƙon ka, 
+          sannan danna "send".
+        </p>
+        <audio controls>
+          <source src="audio/lesson2_message.mp3" type="audio/mp3">
+          Your browser does not support the audio element.
+        </audio>
+    </div>
+      
+
+    <div class="actions">
+      <button class="btn complete-btn">✅ Mark as Complete</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Ilumiled. Made with ❤️ for Katsina girls.</p>
+  </footer>
+
+  <script>
+    const completeBtn = document.querySelector('.complete-btn');
+  
+    completeBtn.addEventListener('click', () => {
+      localStorage.setItem('course1-complete', 'true');
+      completeBtn.textContent = '🎉 Completed';
+      completeBtn.disabled = true;
+    });
+  
+    window.addEventListener('DOMContentLoaded', () => {
+      if (localStorage.getItem('course1-complete') === 'true') {
+        completeBtn.textContent = '🎉 Completed';
+        completeBtn.disabled = true;
+      }
+    });
+  </script>
+  
+</body>
+</html>
